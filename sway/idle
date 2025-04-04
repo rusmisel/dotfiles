@@ -1,4 +1,4 @@
 timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
 timeout 330 lock
-timeout 390 'systemctl hibernate'
+timeout 430 'systemctl suspend-then-hibernate'
 before-sleep lock
