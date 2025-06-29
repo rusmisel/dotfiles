@@ -9,6 +9,8 @@ visualizer_data_source = "/tmp/mpd.fifo"
 visualizer_output_name = "fifo"
 visualizer_in_stereo = "yes"
 visualizer_type = "spectrum"
+visualizer_spectrum_hz_min = 1
+visualizer_spectrum_hz_max = 44100
 
 external_editor = /usr/bin/vim
 use_console_editor = yes

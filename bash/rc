@@ -1,9 +1,10 @@
 if [ -e ~/.cache/wal/sequences ]; then (cat ~/.cache/wal/sequences &); fi
 set -o vi
 
-alias ls='ls --color=auto -Fh'
+alias ls='ls --color=auto -F'
 . /usr/share/nvm/init-nvm.sh
-alias youtube-dl-album='youtube-dl --config-location $HOME/.config/youtube-dl/album'
+alias youtube-dl-album='yt-dlp --config-location $HOME/.config/youtube-dl/album'
+alias youtube-dl-track='yt-dlp --config-location $HOME/.config/youtube-dl/track'
 alias v=vim
 alias h=helix
 

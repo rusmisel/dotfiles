@@ -3,10 +3,7 @@ include "$HOME/.cache/wal/colors-sway"
 ## UI
 gaps inner 16
 default_border pixel 1
-blur enable
-blur_radius 2
-corner_radius 12
-exec swww init
+exec swww-daemon
 exec swww img $wallpaper
 exec swayidle -w
 
