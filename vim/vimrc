@@ -37,6 +37,7 @@ let g:ale_linters = {
 \ 'wgsl': ['wgsl_analyzer'],
 \ 'c': ['clangd', 'clangtidy'],
 \ 'cpp': ['clangd', 'clangtidy'],
+\ 'cuda': ['nvcc', 'clangd', 'clangtidy'],
 \}
 let g:ale_fixers = {
 \ 'typescript': ['deno'],
@@ -46,7 +47,8 @@ let g:ale_fixers = {
 \ 'rust': ['rustfmt'],
 \ 'python': ['ruff_format'],
 \ 'c': ['clang-format'],
-\ 'cpp': ['clang-format']
+\ 'cpp': ['clang-format'],
+\ 'cuda': ['clang-format'],
 \}
 
 let g:taggedtemplate#tagSyntaxMap = {
