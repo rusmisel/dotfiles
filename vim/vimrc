@@ -37,7 +37,7 @@ let g:ale_linters = {
 \ 'wgsl': ['wgsl_analyzer'],
 \ 'c': ['clangd', 'clangtidy'],
 \ 'cpp': ['clangd', 'clangtidy'],
-\ 'cuda': ['nvcc', 'clangd', 'clangtidy'],
+\ 'cuda': ['clangd'],
 \}
 let g:ale_fixers = {
 \ 'typescript': ['deno'],
@@ -45,7 +45,7 @@ let g:ale_fixers = {
 "\ 'typescript': ['prettier'],
 "\ 'typescriptreact': ['prettier'],
 \ 'rust': ['rustfmt'],
-\ 'python': ['ruff_format'],
+\ 'python': ['ruff'],
 \ 'c': ['clang-format'],
 \ 'cpp': ['clang-format'],
 \ 'cuda': ['clang-format'],
@@ -56,4 +56,4 @@ let g:taggedtemplate#tagSyntaxMap = {
 \ "html": "html",
 \ "css":  "css"
 \}
-autocmd FileType javascript,javascriptreact,typescript,typescriptreact : call taggedtemplate#applySyntaxMap()
+autocmd FileType javascript,javascriptreact,typescript,typescriptreact,html : call taggedtemplate#applySyntaxMap()

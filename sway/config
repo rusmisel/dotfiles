@@ -11,7 +11,7 @@ exec swayidle -w
 bar {
     position top
 
-    status_command statusbar
+    status_command statusbar.sh
     font Iosevka 16
     mode hide
     height 40
