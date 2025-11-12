@@ -1,13 +1,11 @@
 if [ -e ~/.cache/wal/sequences ]; then (cat ~/.cache/wal/sequences &); fi
+if [ -e "$HOME"/.local/share/bash-completion/completions/deno.bash ]; then . "$HOME"/.local/share/bash-completion/completions/deno.bash; fi
+if [ -e /usr/share/nvm/init-nvm.sh ]; then . /usr/share/nvm/init-nvm.sh; fi
 set -o vi
 
 alias ls='ls --color=auto -F'
-. /usr/share/nvm/init-nvm.sh
 alias youtube-dl-album='yt-dlp --config-location $HOME/.config/youtube-dl/album'
 alias youtube-dl-track='yt-dlp --config-location $HOME/.config/youtube-dl/track'
 alias v=vim
 alias h=helix
-
-# TODO: move to machine specific conf dir
-export LIBCLANG_PATH="/home/enva2712/.rustup/toolchains/esp/xtensa-esp32-elf-clang/esp-16.0.0-20230516/esp-clang/lib"
-export PATH="$PATH:/home/enva2712/.rustup/toolchains/esp/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin:/home/enva2712/.rustup/toolchains/esp/xtensa-esp32s2-elf/esp-12.2.0_20230208/xtensa-esp32s2-elf/bin:/home/enva2712/.rustup/toolchains/esp/xtensa-esp32s3-elf/esp-12.2.0_20230208/xtensa-esp32s3-elf/bin:/home/enva2712/.rustup/toolchains/esp/riscv32-esp-elf/esp-12.2.0_20230208/riscv32-esp-elf/bin"
+# vim:ft=bash

@@ -7,5 +7,6 @@ export EDITOR=vim VISUAL=vim
 . ~/.bashrc
 
 if [ "$(tty)" = "/dev/tty1" ]; then
-  exec sway
+  exec sway --unsupported-gpu
 fi
+# vim:ft=bash
