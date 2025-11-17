@@ -1,0 +1,7 @@
+k9s:
+  # gpuVendors: {}
+  ui:
+    enableMouse: true
+    logoless: true
+    splashless: true
+    defaultsToFullScreen: false

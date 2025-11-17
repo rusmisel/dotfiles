@@ -5,7 +5,6 @@ include outputs
 gaps inner 16
 default_border pixel 1
 exec swww-daemon
-exec swww img $wallpaper
 exec swayidle -w
 
 bar {
