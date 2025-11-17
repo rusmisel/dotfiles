@@ -1,2 +1,3 @@
 vimrc .vim/vimrc
 plugin .vim/plugin
+en.utf-8.add .vim/spell/en.utf-8.add

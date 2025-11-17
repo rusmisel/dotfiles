@@ -2,4 +2,4 @@
 Description=random pape
 [Service]
 Type=oneshot
-ExecStart=/home/enva2712/.local/bin/pape
+ExecStart=%h/.local/bin/pape

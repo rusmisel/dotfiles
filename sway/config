@@ -11,7 +11,7 @@ exec swayidle -w
 bar {
     position top
 
-    status_command statusbar.sh
+    status_command statusbar
     font Iosevka 16
     mode hide
     height 40
@@ -55,7 +55,7 @@ input "9580:109:HID_256c:006d_Pad" map_to_output "HAT Kamvas Pro 16 0x01010101"
 
 bindsym Mod4+Return exec wezterm
 bindsym Mod4+q kill
-bindsym Mod4+d exec dmenu_path | dmenu -l 10 -fn Iosevka -p run: | xargs swaymsg exec --
+bindsym Mod4+d exec menu
 # bindsym Mod4+d exec tofi-run | xargs swaymsg exec --
 bindsym Mod4+w exec pape
 bindsym Mod4+Shift+w exec sxiv -r $HOME/pics/wallpapers
@@ -63,9 +63,9 @@ floating_modifier Mod4 normal
 bindsym Mod4+Shift+c reload
 bindsym Mod4+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioLowerVolume exec volume down
+bindsym XF86AudioRaiseVolume exec volume up
+bindsym XF86AudioMute exec volume mute
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioPlay exec playerctl play
 bindsym XF86MonBrightnessDown exec brightnessctl set '5%-'

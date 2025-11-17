@@ -1,0 +1,10 @@
+dcalc .local/bin/dcalc
+dmount .local/bin/dmount
+lock .local/bin/lock
+menu .local/bin/menu
+monitor .local/bin/monitor
+no6 .local/bin/no6
+pape .local/bin/pape
+statusbar .local/bin/statusbar
+tomov .local/bin/tomov
+volume .local/bin/volume

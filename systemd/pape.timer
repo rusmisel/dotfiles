@@ -1,7 +1,7 @@
 [Unit]
 Description=set pape
 [Timer]
-OnCalendar=*:0/3
+OnCalendar=*:0/15
 Persistent=true
 [Install]
 WantedBy=default.target

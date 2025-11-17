@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+# while echo -e "$(nmcli net con | grep -q full && nmcli --fields type,name con show --active | tail -n+2 | awk '{ ty = $1; $1 = ""; print (ty == "wifi" ? "" : "") " " $0 "  " }' | head -n1)  $(< /sys/class/power_supply/BAT0/capacity)%    $(date +'%Y-%m-%d')    $(date +'%I:%M:%S %p')"; do sleep 1; done
+while echo -e "$(nmcli net con | grep -q full && nmcli --fields type,name con show --active | tail -n+2 | awk '{ ty = $1; $1 = ""; print (ty == "wifi" ? "" : "") " " $0 "  " }' | head -n1)    $(date +'%Y-%m-%d')    $(date +'%I:%M:%S %p')"; do sleep 1; done

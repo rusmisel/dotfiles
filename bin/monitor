@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# recreating the noti is a bit of a hack...
+set -euo pipefail; if [ $# -ne 1 ]; then echo "usage: $(basename "$0") <DOMAIN>" >&2 && exit 1; fi; while if curl "$1" -s >/dev/null 2>&1; then sleep 10; else notify-send -a "$1" -t 1000 down; sleep 1; fi; do true; done

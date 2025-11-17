@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# shellcheck source=~/.cache/wal/colors.sh
+. ~/.cache/wal/colors.sh
+set -euo pipefail
+for i in {0..15..1}; do
+	colorname="color$i"
+	declare "color$i=$(cut -c 2-7 <<<"${!colorname}")"
+done
+lockscreen="$HOME/.cache/lockscreen"
+lockicon="$HOME/pics/lock.png" # FIXME: janky
+# we can't use [ a -nt b ] b/c test derefs symlinks
+papemod="$(date +%s -d "$(stat "$wallpaper" | awk '/Modify/ { print $2 " " $3 }')")"
+lockmod="$(date +%s -d "$(stat "$lockscreen" | awk '/Modify/ { print $2 " " $3 }')")"
+if [ ! -e "$lockscreen" ] || [ "$papemod" -gt "$lockmod" ] || [ "$(which "$0")" -nt "$lockscreen" ]; then
+	if [ -e "$lockicon" ]; then magick "$wallpaper" -blur 80x80 "${lockicon}[50x50]" -gravity center -composite "$lockscreen";
+	else magick "$wallpaper" -blur 80x80 "$lockscreen"; fi
+fi
+swaylock -i "$lockscreen" \
+	--font iosevka --font-size 24 \
+	--indicator-idle-visible --indicator-radius 100 --indicator-thickness 10 --line-uses-inside \
+	--key-hl-color $color1 --bs-hl-color $color3 --separator-color=$color7 \
+	--text-color   $color7    --text-ver-color $color7       --text-wrong-color $color7       --text-clear-color $color7 \
+	--ring-color   $color7    --ring-ver-color $color1       --ring-wrong-color $color2       --ring-clear-color $color3 \
+	--inside-color 00000000 --inside-ver-color ${color0}aa --inside-wrong-color ${color0}aa --inside-clear-color ${color0}aa
