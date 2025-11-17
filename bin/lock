@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# shellcheck source=~/.cache/wal/colors.sh
 . ~/.cache/wal/colors.sh
 set -euo pipefail
 for i in {0..15..1}; do

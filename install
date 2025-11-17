@@ -31,6 +31,7 @@ find "${SEARCH[@]}" -name loc | while read -r loc; do
 	while read -r line; do
 		from="$fromdir/$(cut -d' ' -f1 <<<"$line")"
 		to="${line##* }"
+		tod="$(dirname "$HOME/$to")"
 		if [ -e "$HOME/$to" ]; then
 			if [ -z "$FORCE" ]; then
 				echo "error: ~/$to already exists" >&2
@@ -43,7 +44,7 @@ find "${SEARCH[@]}" -name loc | while read -r loc; do
 		fi
 		# shellcheck disable=SC2088
 		echo "~/$to <- $from"
-		mkdir -p "$(dirname "$HOME/$to")"
-		ln -fns "$(realpath "$from")" "$HOME/$to"
+		mkdir -p "$tod"
+		ln -fns "$(realpath "$from" --relative-to="$tod")" "$HOME/$to"
 	done <"$loc"
 done
