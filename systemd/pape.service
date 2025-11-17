@@ -2,4 +2,4 @@
 Description=random pape
 [Service]
 Type=oneshot
-ExecStart=%h/.local/bin/pape
+ExecStart=%h/.local/bin/pape ?

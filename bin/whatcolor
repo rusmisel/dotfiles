@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+set -euo pipefail
+slurp -p | grim -g- -tppm - | tail -c3 | xxd -p | wl-copy

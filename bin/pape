@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
-pic="${1:-"$(find "$HOME/pics/wallpapers" -type f | shuf -n1)"}"
+if [ $# -eq 0 ]; then pic="$(sxiv -ort ~/pics/wallpapers | head -n1)"
+elif [ "$1" = "?" ]; then pic="$(find "$HOME/pics/wallpapers" -type f | shuf -n1)"
+elif [ -e "$1" ]; then pic="$1"
+else echo "$1 not found"; exit 1
+fi
 pic="$(realpath "$pic")"
 location="$HOME/.config/wallpaper"
 ln -sf "$pic" "$location"
