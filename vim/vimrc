@@ -1,33 +1,24 @@
 set encoding=utf8
 syntax on
 colorscheme wal
-set background=dark
-hi Normal ctermbg=NONE guibg=NONE
+set ai si spr sb nu rnu list lcs=eol:¬,tab:┊\ ,space:· mouse=a
+set vif=~/.vim/vif bk bdir=~/.vim/bak/ bsk=/tmp/* swf dir=~/.vim/swp/ udf udir=~/.vim/undo/
+
 let g:limelight_conceal_ctermfg = 'darkgray'
 let g:limelight_conceal_guifg = '#555555'
 auto! User GoyoEnter Limelight
 auto! User GoyoLeave Limelight!
 
-set mouse=a
-set nu rnu list lcs=eol:¬,tab:┊\ ,space:·
-" set number
-" set relativenumber
-" set ruler
-" set autoindent
-" set smartindent
-set nu rnu list
-set spr sb
-set nowrap ai
-
-set vif=~/.vim/vif
-set backup backupdir=~/.vim/bak/ backupskip=/tmp/*,/private/*
-set swapfile directory=~/.vim/swp/
-set undofile undodir=~/.vim/undo/
+let g:taggedtemplate#tagSyntaxMap = {
+\ "wgsl": "wgsl",
+\ "html": "html",
+\ "css":  "css"
+\}
+autocmd FileType javascript,javascriptreact,typescript,typescriptreact,html : call taggedtemplate#applySyntaxMap()
 
 set omnifunc=ale#completion#OmniFunc
 let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
-
 let g:ale_linters = {
 \ 'typescript': ['deno'],
 \ 'typescriptreact': ['deno'],
@@ -50,10 +41,3 @@ let g:ale_fixers = {
 \ 'cpp': ['clang-format'],
 \ 'cuda': ['clang-format'],
 \}
-
-let g:taggedtemplate#tagSyntaxMap = {
-\ "wgsl": "wgsl",
-\ "html": "html",
-\ "css":  "css"
-\}
-autocmd FileType javascript,javascriptreact,typescript,typescriptreact,html : call taggedtemplate#applySyntaxMap()
