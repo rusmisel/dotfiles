@@ -1,5 +1,5 @@
 function ftrc#Detect()
-	if (&ft == 'text' || &ft == 'markdown' || &ft == 'ale-preview.message')
+	if (&ft == 'text' || &ft == 'markdown' || &ft == 'nroff' || &ft == 'ale-preview.message')
 		set wrap lbr spell
 	else
 		set nowrap nolbr nospell
