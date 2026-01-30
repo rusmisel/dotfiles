@@ -3,9 +3,12 @@ include outputs
 
 ## UI
 gaps inner 16
-default_border pixel 1
+default_border pixel 2
 exec swww-daemon
 exec swayidle -w
+client.focused $color1 $color1 $color1 $color7
+client.unfocused $color0 $color0 $color0
+for_window [class="Pinentry-gtk"] floating enable
 
 bar {
     position top
