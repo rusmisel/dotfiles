@@ -1,4 +1,4 @@
-export PATH="$PATH:$HOME/.cargo/bin:$HOME/.local/bin:$HOME/.deno/bin:./node_modules/.bin"
+export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$HOME/.deno/bin:$PATH:./node_modules/.bin"
 export GOPATH="$HOME/code/go"
 export EDITOR=vim VISUAL=vim
 . ~/.bashrc
