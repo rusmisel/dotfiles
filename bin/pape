@@ -4,7 +4,7 @@ if pidof swaylock; then echo pape exiting because system locked >&2; exit 1; fi
 if [ $# -eq 0 ]; then pic="$(sxiv -ort ~/pics/wallpapers | head -n1)"
 elif [ "$1" = "?" ]; then pic="$(find "$HOME/pics/wallpapers" -type f | shuf -n1)"
 else pic="$1"; fi
-if [ ! -e "$1" ]; then echo "$1 not found" >&2; exit 1; fi
+if [ ! -e "$pic" ]; then echo "$1 not found" >&2; exit 1; fi
 pic="$(realpath "$pic")"
 location="$HOME/.config/wallpaper"
 ln -sf "$pic" "$location"
