@@ -16,7 +16,7 @@ esac done
 shift $((OPTIND-1))
 if [ $# -eq 0 ]; then set .; fi
 # FIXME: don't leak opts to find if users pass opts after dirs
-find "$@" -name loc | while read -r loc; do
+find "$@" -name .loc | while read -r loc; do
 	# shellcheck disable=SC2094
 	while read -r line; do
 		to="$HOME/${line##* }"
