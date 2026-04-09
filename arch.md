@@ -22,7 +22,7 @@ arch-install-scripts lvm2 cryptsetup dosfstools btrfs-progs sshfs flashrom termi
 pipewire pipewire-pulse pipewire-jack bluez bluez-utils bluez-tools playerctl mpd-mpris mpd ncmpcpp pulsemixer
 
 ## wm
-sway xorg-xwayland swayidle swaylock dmenu swww python-pywal mako libnotify
+sway xorg-xwayland swayidle swaylock dmenu awww python-pywal mako libnotify
 brightnessctl swappy grim slurp wl-clipboard imagemagick yt-dlp xdg-user-dirs wf-recorder
 ttc-iosevka otf-font-awesome noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 wezterm sxiv zathura zathura-pdf-mupdf mpv

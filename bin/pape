@@ -7,8 +7,9 @@ else pic="$1"; fi
 if [ ! -e "$pic" ]; then echo "$1 not found" >&2; exit 1; fi
 pic="$(realpath "$pic")"
 location="$HOME/.config/wallpaper"
+echo "$pic" >> "$HOME/.cache/papehist"
 ln -sf "$pic" "$location"
 wal -c
 wal -i "$location" -a 80 -n >/dev/null 2>&1
-swww img "$location" --transition-type wipe --transition-angle 170
+awww img "$location" --transition-type wipe --transition-angle 170
 pywalfox update || true
