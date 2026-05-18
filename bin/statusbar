@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
 weather=$HOME/.cache/weather
-while curl -s wttr.in/?format="%t%c" > "$weather"; do sleep 300; done &
-while echo -en "$(<"$weather")$(nmcli net con | grep -q full && nmcli --fields type,name con show --active | tail -n+2 | awk '{ ty = $1; $1 = ""; print (ty == "wifi" ? " " : "") $0 "  " }' | head -n1)$(if [ -e /sys/class/power_supply/BAT0 ]; then echo -n " $(< /sys/class/power_supply/BAT0/capacity)%  "; fi) $(date +'%Y-%m-%d')   $(date +'%I:%M:%S %p')"; do sleep 1; done
+while curl -s 'wttr.in/?m&format=%t%c' > "$weather"; do sleep 300; done &
+while echo -en "$(<"$weather")$(nmcli net con | grep -q full && nmcli --fields type,name con show --active | tail -n+2 | awk '{ ty = $1; $1 = ""; print (ty == "wifi" ? " " : "") $0 "  " }' | head -n1)$(if [ -e /sys/class/power_supply/BAT0 ]; then echo -n " $(< /sys/class/power_supply/BAT0/capacity)%  "; fi)♪ $(ncmpcpp -q --current-song='%t')   $(date +'%Y-%m-%d')   $(date +'%I:%M:%S %p')"; do sleep 1; done
