@@ -15,23 +15,16 @@ EOH
 esac done
 shift $((OPTIND-1))
 if [ $# -eq 0 ]; then set .; fi
-# FIXME: don't leak opts to find if users pass opts after dirs
 find "$@" -name .loc | while read -r loc; do
 	# shellcheck disable=SC2094
 	while read -r line; do
 		to="$HOME/${line##* }"
-		tod="$(dirname "$to")"
 		from="$(realpath "$(dirname "$loc")/$(cut -d' ' -f1 <<<"$line")")"
-		if [ -e "$to" ]; then
-			if [ -z "$FORCE" ]; then
-				echo "error: $to already exists" >&2
-				echo "to overwrite run with -f" >&2
-				exit 1
-			else
-				# shellcheck disable=SC2115
-				rm -rf "$to"
-			fi
+		if [ -e "$to" ] && [ -z "$FORCE" ]; then
+			echo "error: $to already exists" >&2
+			echo "to overwrite run with -f" >&2
+			exit 1
 		fi
-		echo "$to -> $from"; mkdir -p "$tod"; ln -fns "$from" "$to"
+		echo "$to -> $from"; mkdir -p "$(dirname "$to")"; ln -fns "$from" "$to"
 	done <"$loc"
 done
