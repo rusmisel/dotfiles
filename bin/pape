@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 if pidof swaylock; then echo pape exiting because system locked >&2; exit 1; fi
-if [ $# -eq 0 ]; then pic="$(sxiv -ort ~/pics/wallpapers | head -n1)"
-elif [ "$1" = "?" ]; then pic="$(find "$HOME/pics/wallpapers" -type f | shuf -n1)"
+if [ $# -eq 0 ]; then pic="$(sxiv -ort "$HOME/pics/papes" | head -n1)"
+elif [ "$1" = "?" ]; then pic="$(find "$HOME/pics/papes" -type f | shuf -n1)"
+elif [ "$1" = "hist" ]; then tac "$HOME/.cache/papehist" | xargs sxiv; exit 1
 else pic="$1"; fi
 if [ ! -e "$pic" ]; then echo "$1 not found" >&2; exit 1; fi
 pic="$(realpath "$pic")"
-location="$HOME/.config/wallpaper"
+location="$HOME/.config/pape"
 echo "$pic" >> "$HOME/.cache/papehist"
 ln -sf "$pic" "$location"
 wal -c

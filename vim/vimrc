@@ -2,7 +2,7 @@ set encoding=utf8
 syntax on
 colorscheme wal
 set ai si spr sb nu rnu list lcs=eol:¬,tab:┊\ ,space:· mouse=a
-set vif=~/.vim/vif bk bdir=~/.vim/bak/ bsk=/tmp/* swf dir=~/.vim/swp/ udf udir=~/.vim/undo/
+set vif=~/.config/vim/vif bk bdir=~/.config/vim/bak/ bsk=/tmp/* swf dir=~/.config/vim/swp/ udf udir=~/.config/vim/undo/
 
 let g:limelight_conceal_ctermfg = 'darkgray'
 let g:limelight_conceal_guifg = '#555555'
