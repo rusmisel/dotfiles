@@ -72,7 +72,7 @@ bindsym Mod4+m exec walmousse
 bindsym Mod4+d exec menu
 bindsym Mod4+w exec pape ?
 bindsym Mod4+Shift+w exec pape
-bindsym Mod4+Return exec wezterm
+bindsym Mod4+Return exec foot
 bindsym Mod4+c exec whatcolor
 bindsym Mod4+p exec grim
 bindsym Mod4+Shift+p exec grim -g "$(slurp)" - | swappy -f -

@@ -1,4 +1,5 @@
 #!/bin/bash
+# shellcheck disable=1090,2154
 . ~/.cache/wal/colors.sh
 dmenu_run -l 10 -p "run:" -fn Iosevka:pixelsize=20 \
   -nb "$background" -nf "$foreground" \
