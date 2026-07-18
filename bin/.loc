@@ -9,3 +9,4 @@ statusbar .local/bin/statusbar
 tomov .local/bin/tomov
 volume .local/bin/volume
 whatcolor .local/bin/whatcolor
+kiwal .local/bin/kiwal
