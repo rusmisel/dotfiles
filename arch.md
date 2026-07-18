@@ -17,7 +17,7 @@ nvidia-open nvidia-utils cuda
 ## TODO: virt & qemu stuff?
 
 ## devshell
-bash-completion arch-install-scripts lvm2 cryptsetup dosfstools btrfs-progs sshfs flashrom terminus-font bat usbutils iptables networkmanager modemmanager wireshark-cli wireguard-tools openresolv nmap masscan docker docker-compose man-db man-pages vim helix tmux git openssh deno clang llvm lldb gdb openocd yosys rustup nvm shellcheck aerc github-cli pass kubectl k9s
+bash-completion man-db man-pages arch-install-scripts lvm2 cryptsetup dosfstools btrfs-progs sshfs flashrom terminus-font bat usbutils iptables htop lsof networkmanager modemmanager wireshark-cli wireguard-tools openresolv nmap masscan rsync docker docker-compose vim helix tmux git openssh deno clang llvm lldb gdb openocd yosys rustup nvm shellcheck aerc github-cli pass kubectl k9s
 
 ## sound
 pipewire pipewire-pulse pipewire-jack bluez bluez-utils bluez-tools playerctl mpd-mpris mpd ncmpcpp pulsemixer
@@ -32,7 +32,7 @@ foot kicad sxiv zathura zathura-pdf-mupdf tesseract-data-eng mpv
 firefox-nightly-bin[aur] (gpg --recv-keys MOZ_KEY)
 python-pywalfox[aur] (pywalfox install && chmod ...)
 
-TODO: re-add vim pack clones to dots repo (dense-analysis/ale editorconfig/editorconfig-vim tpope/vim-fugitive airblade/vim-gitgutter sheerun/vim-polyglot cdata/vim-tagged-template dylanaraps/wal.vim DingDean/wgsl.vim, junegunn/goyo.vim, junegunn/limelight.vim, maybe matze/vim-move)
+TODO: re-add vim pack clones to dots repo (dense-analysis/ale editorconfig/editorconfig-vim tpope/vim-fugitive airblade/vim-gitgutter sheerun/vim-polyglot cdata/vim-tagged-template dylanaraps/wal.vim DingDean/wgsl.vim junegunn/goyo.vim junegunn/limelight.vim maybe matze/vim-move)
 ## sudo systemctl restart systemd-vconsole-setup.service
 
 # TODO
