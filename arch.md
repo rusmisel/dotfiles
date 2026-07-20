@@ -25,7 +25,7 @@ pipewire pipewire-pulse pipewire-jack bluez bluez-utils bluez-tools playerctl mp
 ## wm
 sway xorg-xwayland swayidle swaylock dmenu awww python-pywal mako libnotify
 brightnessctl swappy grim slurp wl-clipboard imagemagick yt-dlp xdg-user-dirs wf-recorder
-ttc-iosevka otf-font-awesome noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
+ttc-iosevka otf-font-awesome ttf-nerd-fonts-symbols noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 foot kicad sxiv zathura zathura-pdf-mupdf tesseract-data-eng mpv
 
 ## browser:
