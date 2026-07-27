@@ -76,6 +76,14 @@ install -Dm644 /dev/stdin "${1:-"$HOME"/.config/kicad/10.0/colors/kiwal.json}"<<
       "b": "rgb(77, 127, 196)",
       "f": "rgb(200, 52, 52)",
       "in1": "rgb(127, 200, 127)",
+      "in2": "rgb(206, 125, 44)",
+      "in3": "rgb(79, 203, 203)",
+      "in4": "rgb(219, 98, 139)",
+      "in5": "rgb(167, 165, 198)",
+      "in6": "rgb(40, 204, 217)",
+      "in7": "rgb(232, 178, 167)",
+      "in8": "rgb(242, 237, 161)",
+      "in9": "rgb(141, 203, 129)",
       "in10": "rgb(237, 124, 51)",
       "in11": "rgb(91, 195, 235)",
       "in12": "rgb(247, 111, 142)",
@@ -86,7 +94,6 @@ install -Dm644 /dev/stdin "${1:-"$HOME"/.config/kicad/10.0/colors/kiwal.json}"<<
       "in17": "rgb(237, 124, 51)",
       "in18": "rgb(91, 195, 235)",
       "in19": "rgb(247, 111, 142)",
-      "in2": "rgb(206, 125, 44)",
       "in20": "rgb(167, 165, 198)",
       "in21": "rgb(40, 204, 217)",
       "in22": "rgb(232, 178, 167)",
@@ -97,14 +104,7 @@ install -Dm644 /dev/stdin "${1:-"$HOME"/.config/kicad/10.0/colors/kiwal.json}"<<
       "in27": "rgb(167, 165, 198)",
       "in28": "rgb(40, 204, 217)",
       "in29": "rgb(232, 178, 167)",
-      "in3": "rgb(79, 203, 203)",
-      "in30": "rgb(242, 237, 161)",
-      "in4": "rgb(219, 98, 139)",
-      "in5": "rgb(167, 165, 198)",
-      "in6": "rgb(40, 204, 217)",
-      "in7": "rgb(232, 178, 167)",
-      "in8": "rgb(242, 237, 161)",
-      "in9": "rgb(141, 203, 129)"
+      "in30": "rgb(242, 237, 161)"
     },
     "cursor": "$foreground",
     "drc_error": "rgba(215, 91, 107, 0.800)",
@@ -113,7 +113,7 @@ install -Dm644 /dev/stdin "${1:-"$HOME"/.config/kicad/10.0/colors/kiwal.json}"<<
     "dwgs_user": "rgb(194, 194, 194)",
     "eco1_user": "rgb(180, 219, 210)",
     "eco2_user": "rgb(216, 200, 82)",
-    "edge_cuts": "rgb(208, 210, 205)",
+    "edge_cuts": "$foreground",
     "f_adhes": "rgb(132, 0, 132)",
     "f_crtyd": "rgb(255, 38, 226)",
     "f_fab": "$color2",
@@ -130,7 +130,7 @@ install -Dm644 /dev/stdin "${1:-"$HOME"/.config/kicad/10.0/colors/kiwal.json}"<<
     "page_limits": "rgb(132, 132, 132)",
     "plated_hole": "rgb(26, 196, 210)",
     "points": "rgb(255, 38, 226)",
-    "ratsnest": "$color2",
+    "ratsnest": "$foreground",
     "track_net_names": "rgba(255, 255, 255, 0.702)",
     "user_1": "rgb(194, 194, 194)",
     "user_10": "rgb(89, 148, 220)",
@@ -315,4 +315,3 @@ install -Dm644 /dev/stdin "${1:-"$HOME"/.config/kicad/10.0/colors/kiwal.json}"<<
   }
 }
 EOC
-
