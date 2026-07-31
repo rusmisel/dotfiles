@@ -17,7 +17,7 @@ nvidia-open nvidia-utils cuda
 ## TODO: virt & qemu stuff?
 
 ## devshell
-bash-completion man-db man-pages arch-install-scripts lvm2 cryptsetup dosfstools btrfs-progs sshfs flashrom terminus-font bat usbutils iptables htop lsof networkmanager modemmanager wireshark-cli wireguard-tools openresolv nmap masscan rsync docker docker-compose vim helix tmux git openssh deno clang llvm lldb gdb openocd yosys rustup nvm shellcheck aerc github-cli pass kubectl k9s
+bash-completion man-db man-pages arch-install-scripts lvm2 cryptsetup dosfstools btrfs-progs sshfs flashrom terminus-font bat usbutils iptables htop lsof networkmanager modemmanager wireshark-cli wireguard-tools openresolv nmap masscan rsync sigrok-cli docker docker-compose vim helix tmux git openssh deno clang llvm lldb gdb openocd yosys rustup nvm shellcheck aerc github-cli pass kubectl k9s
 
 ## sound
 pipewire pipewire-pulse pipewire-jack bluez bluez-utils bluez-tools playerctl mpd-mpris mpd ncmpcpp pulsemixer
@@ -26,7 +26,7 @@ pipewire pipewire-pulse pipewire-jack bluez bluez-utils bluez-tools playerctl mp
 sway xorg-xwayland swayidle swaylock dmenu awww python-pywal mako libnotify
 brightnessctl swappy grim slurp wl-clipboard imagemagick yt-dlp xdg-user-dirs wf-recorder
 ttc-iosevka otf-font-awesome ttf-nerd-fonts-symbols noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
-foot kicad sxiv zathura zathura-pdf-mupdf tesseract-data-eng mpv
+foot kicad sxiv mpv pulseview zathura zathura-pdf-mupdf tesseract-data-eng
 
 ## browser:
 firefox-nightly-bin[aur] (gpg --recv-keys MOZ_KEY)
