@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+if [ "$#" -eq 0 ]; then echo "usage: $0 <FILE...>"; exit 1; fi
+while [ "$#" -ne 0 ]; do
+	if [ ! -f "$1" ]; then echo "no file '$1'" >&2; exit 1; fi
+	echo "stripping meta from $1"
+	tmp="$(mktemp --suffix=".${1##*.}")"
+	# shellcheck disable=SC2064
+	trap "rm -f $tmp" EXIT
+	m=(-map_metadata -1)
+	while read -r v;do m+=(-metadata "$v");done< <(ffprobe -i "$1" -show_entries format_tags=title,artist,album_artist,album,date,track,genre,disk 2>/dev/null | awk -F: '/^TAG/{print $2}')
+	ffmpeg -i "$1" -c copy "${m[@]}" -y -loglevel quiet "$tmp"
+	mv "$tmp" "$1"
+	shift
+done
