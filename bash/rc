@@ -1,7 +1,6 @@
 if [ -e ~/.cache/wal/sequences ]; then (cat ~/.cache/wal/sequences &); fi
 if [ -e "$HOME"/.local/share/bash-completion/completions/deno.bash ]; then . "$HOME"/.local/share/bash-completion/completions/deno.bash; fi
 if [ -e /usr/share/nvm/init-nvm.sh ]; then . /usr/share/nvm/init-nvm.sh; fi
-set -o vi
 alias v=vim
 alias h=helix
 alias ls='ls --color=auto -F'
