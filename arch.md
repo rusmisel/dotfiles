@@ -10,14 +10,14 @@ mkinitcpio
 ## graphics
 mesa vulkan-extra-tools spirv-tools spirv-headers vulkan-tools libva libva-utils
 ## amd
-amd-ucode linux-firmware-amdgpu vulkan-radeon rocm-gdb rocm-llvm rocm-core amdsmi rocm-smi-lib
+amd-ucode linux-firmware-amdgpu vulkan-radeon rocm-gdb rocm-llvm rocm-core amdsmi rocm-smi-lib ggml-hip
 ## nvidia
-nvidia-open nvidia-utils cuda
+nvidia-open nvidia-utils cuda ggml-cuda
 
 ## TODO: virt & qemu stuff?
 
 ## devshell
-bash-completion man-db man-pages arch-install-scripts lvm2 cryptsetup dosfstools btrfs-progs sshfs flashrom terminus-font bat usbutils iptables htop lsof networkmanager modemmanager wireshark-cli wireguard-tools openresolv nmap masscan rsync sigrok-cli docker docker-compose vim helix tmux git openssh deno clang llvm lldb gdb openocd yosys rustup nvm shellcheck aerc github-cli pass kubectl k9s
+bash-completion man-db man-pages arch-install-scripts lvm2 cryptsetup dosfstools btrfs-progs sshfs flashrom terminus-font bat usbutils iptables htop nvtop lsof networkmanager modemmanager wireshark-cli wireguard-tools openresolv nmap masscan rsync sigrok-cli docker docker-compose vim helix tmux git openssh texlive texlive-lang pandoc deno clang llvm lldb gdb openocd yosys rustup nvm shellcheck aerc github-cli pass kubectl k9s llama-cpp whisper-cpp
 
 ## sound
 pipewire pipewire-pulse pipewire-jack bluez bluez-utils bluez-tools playerctl mpd-mpris mpd ncmpcpp pulsemixer

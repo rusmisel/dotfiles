@@ -41,3 +41,10 @@ let g:ale_fixers = {
 \ 'cpp': ['clang-format'],
 \ 'cuda': ['clang-format'],
 \}
+
+let g:llama_config = {
+\ 'show_info': 0,
+\ 'model_fim': 'ggml-org/Qwen2.5-Coder-14B-Q8_0-GGUF:Q8_0',
+\ 'profiles': { 'lo': 'http://gpubox:8080' },
+\ 'profile': 'lo',
+\}
